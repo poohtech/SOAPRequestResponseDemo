@@ -41,7 +41,6 @@ public class ListActivity extends Activity {
         listRecyclerView.setLayoutManager(mLayoutManager);
 
         new GetRegionProcess().execute();
-
     }
 
     public class GetRegionProcess extends AsyncTask<Void, Void, Integer> {
@@ -78,7 +77,6 @@ public class ListActivity extends Activity {
                 result = this.parse(result1);
 
             } catch (Exception e) {
-                System.out.println(this.getClass() + "" + e);
                 System.out.println(this.getClass() + "::doInBackground::" + e);
             }
             return result;
